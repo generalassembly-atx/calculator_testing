@@ -13,13 +13,13 @@ var calculator = {
   /* E.G. squareRoot(9) is 3 */
   squareRoot: function(n){ return Math.sqrt(n); },
   /* E.G. Rounds up a number roundUp(3.1) will be "4" */
-  roundUp: function(n){ return Math.floor(n); },
+  roundUp: function(n){ return Math.ceil(n); },
   /* E.G. Rounds down a number roundUp(3.1) will be "3" */
-  roundDown: function(n){ return Math.ceil(n); },
+  roundDown: function(n){ return Math.floor(n); },
   /* BONUS: write a function that returns a random number between 1-10,
   and figure out a way to test it, *Use stackOverflow* HINT: a loop when testing */
   random: function(){
-    var randomnumber;
+    return randomnumber;
 
   }
 };
@@ -45,21 +45,21 @@ describe('Calculator functions work', function(){
     expect(calculator.squared(4)).to.equal(16);
   });
   it('calculator.power works correctly',function(){
-    expect(Math.pow(4,3)).to.equal(64);
+    expect(calculator.power(4,3)).to.equal(64);
   });
   it('calculator.squareRoot works correctly',function(){
-    expect(Math.sqrt(9)).to.equal(3);
+    expect(calculator.squareRoot(9)).to.equal(3);
   });
 
   it('calculator.roundUp works correctly',function(){
-    expect(Math.ceil(1.2)).to.equal(2);
+    expect(calculator.roundUp(1.2)).to.equal(2);
   });
   it('calculator.roundDown works correctly',function(){
-    expect(Math.floor(1.2)).to.equal(1);
+    expect(calculator.roundDown(1.2)).to.equal(1);
   });
 
   it('calculator.random works correctly',function(){
-    expect(randomnumber).to.be.above(-1);
+    expect(randomnumber).to.be.within(1,10);
   });
 
 });
