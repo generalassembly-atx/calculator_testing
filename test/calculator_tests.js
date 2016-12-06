@@ -3,7 +3,7 @@ var calculator = {
   /* Basic arithmatic functions */
   add: function(a,b){ return a + b; },
   subtract: function(a,b){ return a - b; },
-  multiply: function(a,b){ return a * a; },
+  multiply: function(a,b){ return a * b; },
   divide: function(a,b){ return a / b; },
   squared: function(n){ return n * n; },
   /* Look up the Math object on W3 schools or Mozilla */
@@ -27,6 +27,29 @@ describe('Calculator functions work', function(){
 
   it('calculator.add works correctly',function(){
     expect(calculator.add(1,2)).to.equal(3);
+  });
+
+  it('calculator.subtract works correctly', function(){
+    expect(calculator.subtract(2,1)).to.equal(1);
+  });
+
+  it('calculator.multiply works correctly', function(){
+    expect(calculator.multiply(2,3)).to.equal(6);
+  });
+  it('calculator.divide works correctly', function(){
+    expect(calculator.divide(6,3)).to.equal(2);
+  });
+  it('calculator.squared works correctly', function(){
+    expect(calculator.squared(3)).to.equal(9);
+  });
+  it('calculator.power works correctly', function(){
+    expect(calculator.power(2,3)).to.equal(8);
+  });
+  it('calculator.roundUp works correctly', function(){
+    expect(calculator.roundUp(2)).to.equal(3);
+  });
+  it('calculator.roundDown works correctly', function(){
+    expect(calculator.roundDown(2)).to.equal(1);
   });
 
 });
