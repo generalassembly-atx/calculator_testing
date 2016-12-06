@@ -3,7 +3,8 @@ var calculator = {
   /* Basic arithmatic functions */
   add: function(a,b){ return a + b; },
   subtract: function(a,b){ return a - b; },
-  multiply: function(a,b){ return a * a; },
+  //multiply: function(a,b){ return a * a; },
+  multiply: function(a,b){ return a * b; },
   divide: function(a,b){ return a / b; },
   squared: function(n){ return n * n; },
   /* Look up the Math object on W3 schools or Mozilla */
@@ -28,5 +29,40 @@ describe('Calculator functions work', function(){
   it('calculator.add works correctly',function(){
     expect(calculator.add(1,2)).to.equal(3);
   });
+
+  it('calculator.subtract functions work correctly', function(){
+    expect(calculator.subtract(4,2)).to.equal(2);
+  });
+
+  it('calculator.multiply functions work correctly', function(){
+    expect(calculator.multiply(5,3)).to.equal(15);
+  });
+
+  it('calculator.divide functions work correctly', function(){
+    expect(calculator.divide(10,2)).to.equal(5);
+  });
+
+  it('calculator.squared functions work correctly', function(){
+    expect(calculator.squared(3)).to.equal(9);
+  });
+  //power
+  it('calculator.power functions work correctly', function(){
+    expect(calculator.power(3,3)).to.equal(27);
+  });
+  //squareRoot
+  it('calculator.squareRoot functions work correctly', function(){
+    expect(calculator.squareRoot(25)).to.equal(5);
+  });
+  //roundUp
+  it('calculator.roundUp functions work correctly', function(){
+    expect(calculator.roundUp(5.1)).to.equal(6);
+  });
+  //roundDown
+  it('calculator.roundDown functions work correctly', function(){
+    expect(calculator.roundDown(5.1)).to.equal(5);
+  })
+
+  //can't seem to get roundUp and roundDown to work 
+
 
 });
