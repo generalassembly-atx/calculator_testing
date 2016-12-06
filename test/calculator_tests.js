@@ -62,7 +62,7 @@ describe('Calculator functions work', function(){
     expect(calculator.roundDown(5.1)).to.equal(5);
   })
 
-  //can't seem to get roundUp and roundDown to work
+  //can't seem to get roundUp and roundDown to work 
 
 
 });
