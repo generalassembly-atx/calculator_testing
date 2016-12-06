@@ -28,5 +28,29 @@ describe('Calculator functions work', function(){
   it('calculator.add works correctly',function(){
     expect(calculator.add(1,2)).to.equal(3);
   });
+  it('calculator.subtract works correctly',function(){
+    expect(calculator.subtract(3,2)).to.equal(1);
+  });
+  it('calculator.multiply works correctly',function(){
+    expect(calculator.multiply(2,2)).to.equal(4);
+  });
+  it('calculator.divide works correctly',function(){
+    expect(calculator.add(6,2)).to.equal(3);
+  });
+  it('calculator.squared works correctly',function(){
+    expect(calculator.squared(4)).to.equal(16);
+  });
+  it('calculator.power works correctly',function(){
+    expect(calculator.power(4,3)).to.equal(64);
+  });
+  it('calculator.squareRoot works correctly',function(){
+    expect(calculator.add(81)).to.equal(9);
+  });
+  it('calculator.roundUp works correctly',function(){
+    expect(calculator.add(3.1)).to.equal(4);
+  });
+  it('calculator.roundDown works correctly',function(){
+    expect(calculator.add(3.1)).to.equal(3);
+  });
 
 });
